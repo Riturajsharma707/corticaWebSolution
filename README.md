@@ -41,7 +41,7 @@ DB_NAME='foodapp'
 
 ## Database
 
-Create Item and cartItem table to in foodapp database.
+Create Item and cartItem table in foodapp database.
 
 ## Author:
 
