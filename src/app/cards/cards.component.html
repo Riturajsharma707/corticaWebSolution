@@ -1,0 +1,20 @@
+<section class="w-full min-h-screen bg-pink-100 p-10 flex flex-wrap gap-10 ">
+
+    <div *ngIf="cardItem==''" class='w-full'>
+        <p class="text-2xl font-serif font-bold text-red-700 text-center">There is no Item in Cart</p>
+    </div>
+
+    <div #elseBlock *ngFor="let item of cardItem" class="flex h-60 w-80 p-2 border border-black rounded-lg ">
+        <div>
+            <img [src]="item.image" alt="item.name" class="w-[200px] h-[200px]">
+        </div>
+        <div class=" m-3  gap-4">
+            <p class="m-2 uppercase texi-xl font-bold">{{item.name}}</p>
+            <p class="m-2">Qnt: <span class="font-bold">{{item.quantity}}</span></p>
+            <button class="border px-5 py-2 mt-4 bg-red-300 hover:bg-red-400 rounded-lg bottom-0"
+                (click)="removeItem(item)">remove</button>
+        </div>
+
+    </div>
+
+</section>

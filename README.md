@@ -10,6 +10,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Run this projec
+
+Run `npm run dev` to run both frontend and backend concurrently.
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -25,3 +29,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Instruction to setup backen
+
+Create .env file declare required variables such as
+PORT= 5000
+DB_HOST= 'localhost'
+DB_USER= DB_user
+DB_PASSWORD=your_DB_password
+DB_NAME='foodapp'
+
+## Database
+
+Create Item and cartItem table to in foodapp database.
+
+## Author:
+
+Ritu raj sharma

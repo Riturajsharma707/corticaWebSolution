@@ -1,0 +1,23 @@
+<section class="w-full min-h-screen p-10 bg-pink-100 ">
+
+    <p class="text-3xl font-serif text-center p-3">Welcome to demo Market assigned by Cortica Web solutions</p>
+
+    <div class="flex gap-10 w-full h-screen pt-5 flex-wrap ">
+
+        <div *ngFor="let item of data"
+            class=" flex h-60 w-80 border m-5 p-2 border-black drop-shadow-lg gap-3 hover:scale-110 delay-150 shadow-xl  rounded-lg ">
+            <div class="w-1/2 h-full justify-start">
+                <img [src]="item.image" alt="" class="h-[180px] w-[200px]">
+            </div>
+            <div class="w-1/2 h-full justify-end">
+
+                <p class="text-xl font-bold uppercase">{{item.name}}</p>
+                <p class="font-thin">{{item.description}}</p>
+                <button class="bg-red-300 py-2 px-5 m-3 rounded-md border hover:bg-red-400"
+                    (click)="addItem(item)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
