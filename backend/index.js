@@ -28,7 +28,9 @@ app.post("/api/cart-items", (req, res) => {
 });
 
 app.get("/api/cart", (req, res) => {
-  const query = "SELECT * FROM ITEM I JOIN CARTITEM C ON I.ID=C.item_id";
+  // const query = "SELECT * FROM ITEM I JOIN CARTITEM C ON I.ID=C.item_id";
+  const query =
+    "select i.name,i.image, c.item_id, count(c.item_id) quantity from item i inner join cartitem c on i.id=c.item_id group by c.item_id";
   connection.query(query, (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });

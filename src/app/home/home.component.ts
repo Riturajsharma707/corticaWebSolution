@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       quantity: 1,
     };
     this.dataServie.addItem(payload).subscribe((result: any) => {
-      alert('Item successully added in Cart');
+      alert('Item successfully added in Cart');
     });
   }
 }

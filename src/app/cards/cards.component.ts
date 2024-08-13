@@ -11,10 +11,13 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class CardsComponent implements OnInit {
   cardItem: any;
+  quntity: number = 0;
   constructor(private dataService: ItemService) {}
   ngOnInit(): void {
     this.dataService.getCart().subscribe((result: any) => {
       this.cardItem = result;
+
+      // console.log('cartItem::', this.cardItem);
     });
   }
 
@@ -26,6 +29,6 @@ export class CardsComponent implements OnInit {
       console.log('result', result);
       // alert('Item successfully removed');
     });
-    alert('Item removed');
+    alert('Item successfully removed');
   }
 }
