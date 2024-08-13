@@ -15,7 +15,6 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getCart().subscribe((result: any) => {
       this.cardItem = result;
-      console.log(this.cardItem);
     });
   }
 
@@ -27,5 +26,6 @@ export class CardsComponent implements OnInit {
       console.log('result', result);
       // alert('Item successfully removed');
     });
+    alert('Item removed');
   }
 }

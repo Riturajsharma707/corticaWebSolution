@@ -18,12 +18,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.dataServie.getData().subscribe((result: any) => {
       this.data = result;
-      console.log(this.data);
     });
   }
 
   addItem(item: any) {
-    console.log('Item::', item);
     let payload = {
       item_id: item.id,
       quantity: 1,
